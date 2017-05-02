@@ -1,0 +1,8 @@
+1 : Jienan Tang
+2 : jienanta, 1388017679
+3 : I have implemented a client, a edge server and two backend server that can perform bitwise opertation given input file.
+4 : I have four different files. They are edge.c, client.c, server_or.c, server_and.c. They are the edge server, edge server will receive input from client and send each of the input to the coresponding backend server to perform bitwise operation. Then it will send back the result to the client. client will receive input from user and send it to the edge server. Server_or will perform bitwise or operation and server_and will perform bitwise and operation.
+5 : make all to build all the file. make edge to run edge server; make server_and, make server_or to run backend server.
+./client + "input file name" to run client.
+6 : For my code, the client will read input from file line by line, it will append a ascii character starting from "~" at the begining of each line to remember the order. After reading one line it will send it to the edge server and edge server will send it to the backend server for calculation. Then edge will store the returned result by the backend server. After all the lines are read, the edge will send it back to client in order and client will print out the message.
+7 : some of the codes for establishing connection between client and server are from beej and the rest are all my own code.
